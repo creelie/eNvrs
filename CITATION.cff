@@ -2,15 +2,23 @@ cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
 title: "Blowup above the exponent one third in viscous Katz-Pavlovic dyadic models with small shell ratios"
 type: software
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23247974
+    description: Concept DOI (all versions)
+  - type: doi
+    value: 10.5281/zenodo.23247975
+    description: Version 1.0.0
 authors:
   - family-names: Bhattacharjee
     given-names: Deep
     orcid: "https://orcid.org/0000-0003-0466-750X"
     affiliation: "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India"
     email: d.bhattacharjee@erl-forschung.de
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-10-08
 license: MIT
+doi: 10.5281/zenodo.23247974
 repository-code: "https://github.com/creelie/eNvrs"
 keywords:
   - dyadic model

@@ -11,3 +11,5 @@ Files:
 - `dyadic-blowup-arxiv.tar.gz`: LaTeX source with the figures as PDF.
 
 The repository at this tag also holds the verifier, its output for the five cases, the independent Python, C and Julia checks, and the Lean 4 proofs of eight elementary lemmas.
+
+Version 1.1.0 adds the DOI of the Zenodo archive (concept DOI [10.5281/zenodo.23247974](https://doi.org/10.5281/zenodo.23247974)) to the paper, the README and the citation file. The mathematics is unchanged from version 1.0.0 ([10.5281/zenodo.23247975](https://doi.org/10.5281/zenodo.23247975)).
