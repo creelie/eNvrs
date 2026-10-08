@@ -1,0 +1,47 @@
+\providecommand{\figdata}{../data}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 1, horizontal sep=1.55cm},
+  width=0.5\textwidth, height=0.44\textwidth,
+  tick label style={font=\scriptsize}, label style={font=\small},
+  grid=major, grid style={black!7}, axis line style={black!45}]
+% (a) growth factor of the inviscid front
+\nextgroupplot[xmin=1.08, xmax=2.02, ymin=0.984, ymax=1.032,
+  xlabel={shell ratio $\Lambda$}, ylabel={growth factor $\kappa(\Lambda)$},
+  ytick={0.99,1,1.01,1.02,1.03},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+  title={\small (a) front growth per shell}]
+\addplot[black!40, dashed, forget plot] coordinates {(1.08,1) (2.02,1)};
+\addplot[line width=0.9pt, blue!70!black, mark=*, mark size=1.1pt] table[x=Lam, y=kappa] {\figdata/kappa.dat};
+\addplot[only marks, mark=square*, mark size=2pt, red!75!black] coordinates
+  {(1.2,1.0162851) (1.3,1.0240159) (1.5,1.0264284) (1.7,1.0159975) (1.8,1.0074774)};
+\draw[black!60, -{Stealth[length=4pt]}] (axis cs:1.62,0.9905) node[left, font=\scriptsize, fill=white, inner sep=1pt] {$\Lambda_c\approx1.8754$} -- (axis cs:1.872,0.9995);
+% (b) the dissipation exponent
+\nextgroupplot[xmin=1.08, xmax=3.0, ymin=0.25, ymax=0.56,
+  xlabel={shell ratio $\Lambda$}, ylabel={dissipation exponent $\alpha$},
+  ytick={0.25,1/3,0.4,0.5}, yticklabels={$\tfrac14$,$\tfrac13$,$0.4$,$\tfrac12$},
+  title={\small (b) regularity and blowup}]
+% Cheskidov: blowup below 1/3
+\addplot[draw=none, fill=red!12, forget plot] coordinates {(1.08,0.25) (3.0,0.25) (3.0,1/3) (1.08,1/3)} -- cycle;
+% regularity: alpha >= 1/2 (Cheskidov) or alpha >= max(1/3, 1/4 + log 2/(8 log Lambda)) (Zhang)
+\addplot[draw=none, fill=blue!10, forget plot, domain=1.08:3.0, samples=160]
+  {min(0.5, max(1/3, 0.25 + ln(2)/(8*ln(x))))} -- (axis cs:3.0,0.56) -- (axis cs:1.08,0.56) -- cycle;
+\addplot[blue!65!black, line width=0.7pt, domain=1.08:3.0, samples=160]
+  {min(0.5, max(1/3, 0.25 + ln(2)/(8*ln(x))))};
+% conjectured threshold from the front
+\addplot[black, densely dashed, line width=0.8pt] table[x=Lam, y=astar] {\figdata/kappa.dat};
+\addplot[black, densely dashed, line width=0.8pt, forget plot] coordinates {(2.0,1/3) (3.0,1/3)};
+% proved here: blowup for 1/3 <= alpha <= alpha_Lambda
+\addplot[red!75!black, line width=2.2pt, forget plot] coordinates {(1.2,1/3) (1.2,0.377)};
+\addplot[red!75!black, line width=2.2pt, forget plot] coordinates {(1.3,1/3) (1.3,0.378)};
+\addplot[red!75!black, line width=2.2pt, forget plot] coordinates {(1.5,1/3) (1.5,0.365)};
+\addplot[red!75!black, line width=2.2pt, forget plot] coordinates {(1.7,1/3) (1.7,0.348)};
+\addplot[red!75!black, line width=2.2pt, forget plot] coordinates {(1.8,1/3) (1.8,0.339)};
+\addplot[black!50, dotted, forget plot] coordinates {(2.8284,0.25) (2.8284,0.56)};
+\node[font=\scriptsize, anchor=south west, inner sep=1pt] at (axis cs:2.84,0.255) {$2^{3/2}$};
+\node[font=\scriptsize, align=center] at (axis cs:2.3,0.29) {blowup\\[-1pt](Cheskidov)};
+\node[font=\scriptsize, align=center] at (axis cs:2.35,0.48) {regularity\\[-1pt](Cheskidov, Zhang)};
+\node[font=\scriptsize, align=left, anchor=west, red!70!black] at (axis cs:1.12,0.43) {blowup proved\\[-1pt]here (bars)};
+\draw[red!70!black, -{Stealth[length=4pt]}] (axis cs:1.27,0.415) -- (axis cs:1.29,0.382);
+\node[font=\scriptsize, anchor=west, inner sep=1pt] at (axis cs:1.95,0.36) {open};
+\end{groupplot}
+\end{tikzpicture}

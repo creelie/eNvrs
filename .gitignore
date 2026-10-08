@@ -1,0 +1,13 @@
+# build products (dist/ is committed: it holds the release files)
+build/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/figures/build/
+cap/verify_step
+cap/pt_*
+capd-install/
+lean/.lake/
+__pycache__/
+*.pyc

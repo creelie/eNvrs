@@ -1,0 +1,8 @@
+Lam=1.6: M=400 kappa=1.022497 act=400 alpha*=0.3570 gamma=0.2860 [20s]
+Lam=1.7: M=390 kappa=1.015997 act=390 alpha*=0.3483 gamma=0.3034 [17s]
+Lam=1.8: M=352 kappa=1.007477 act=352 alpha*=0.3397 gamma=0.3207 [11s]
+Lam=1.9: M=322 kappa=1.000000 act=322 alpha*=0.3333 gamma=0.3333 [11s]
+Lam=2.2: M=262 kappa=1.000000 act=262 alpha*=0.3333 gamma=0.3333 [6s]
+Lam=2.5: M=226 kappa=1.000000 act=226 alpha*=0.3333 gamma=0.3333 [4s]
+Lam=3.0: M=188 kappa=1.000000 act=188 alpha*=0.3333 gamma=0.3333 [3s]
+Lam=4.0: M=149 kappa=1.000000 act=149 alpha*=0.3333 gamma=0.3333 [2s]
