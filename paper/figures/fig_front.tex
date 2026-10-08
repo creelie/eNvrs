@@ -1,0 +1,22 @@
+\providecommand{\figdata}{../data}
+\begin{tikzpicture}
+\begin{axis}[width=0.95\textwidth, height=0.66\textwidth, view={38}{26},
+  xmin=0, xmax=168, ymin=0, ymax=100, zmin=-1.5, zmax=1.2,
+  xtick={0,40,80,120,160}, ytick={0,20,40,60,80,100}, ztick={-1,0,1},
+  zticklabels={$10^{-1}$,$1$,$10$},
+  tick label style={font=\scriptsize}, label style={font=\small},
+  xlabel={shell $m$}, ylabel={step $j$}, zlabel={$y_m=\Lambda^{m/3}u_m$},
+  xlabel style={sloped like x axis, yshift=3pt}, ylabel style={sloped like y axis, yshift=3pt},
+  grid=major, grid style={black!7}, axis line style={black!45}, clip=false]
+\pgfplotsinvokeforeach{100,90,80,70,60,50,40,30,20,10,0}{
+  \addplot3[draw=none, fill=white, fill opacity=0.9, forget plot]
+    table[x=m, y=n, z=z] {\figdata/front_#1.dat} \closedcycle;
+  \addplot3[line width=0.8pt, color=red!#1!blue!80!black, forget plot]
+    table[x=m, y=n, z=z] {\figdata/front_#1.dat};
+}
+% the front shell n_j = 60 + j, where y = Y_{n_j} grows like kappa^j
+\addplot3[densely dashed, line width=0.6pt, black!75, domain=0:100, samples=2, samples y=1]
+  ({60+x}, {x}, {x*0.0104097});
+\node[font=\scriptsize, fill=white, inner sep=1.5pt, anchor=west] at (axis cs:163,100,1.04) {$Y_{n_j}\approx\kappa^{j}$};
+\end{axis}
+\end{tikzpicture}

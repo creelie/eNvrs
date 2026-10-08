@@ -1,0 +1,42 @@
+{
+  "title": "Blowup above the exponent one third in viscous Katz-Pavlović dyadic models with small shell ratios",
+  "version": "1.0.0",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Bhattacharjee, Deep",
+      "orcid": "0000-0003-0466-750X",
+      "affiliation": "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Claude (Anthropic)",
+      "type": "Other"
+    }
+  ],
+  "description": "<p>For the viscous Katz&ndash;Pavlovi&#263; dyadic model with shell ratio &Lambda; &gt; 2<sup>3/2</sup>, global regularity holds exactly for dissipation exponents &alpha; &ge; 1/3. We prove that this threshold is not universal: for &Lambda; = 6/5, 13/10, 3/2, 17/10 and 9/5, suitable nonnegative finitely supported data lose regularity in finite time for every &alpha; &le; &alpha;<sub>&Lambda;</sub>, where &alpha;<sub>&Lambda;</sub> &gt; 1/3; for example &alpha;<sub>13/10</sub> = 0.378. The blowup is carried by a self-similar energy front whose amplitude grows by a fixed factor &kappa; &gt; 1 per shell. The proof reduces the dynamics to one renormalized step of the front and verifies that step in interval arithmetic with the CAPD library; it is rigorous provided CAPD and the verifier are correct.</p><p>The result concerns the dyadic model, not the Navier&ndash;Stokes equations. The conjectured threshold for every shell ratio is supported by computation only.</p><p>The archive contains the paper (PDF, LaTeX source with the figures as PNG, LaTeX source with the figures as PDF), the interval verifier and its output for the five cases, an independent 60-digit re-check of the scalar inequalities, independent C and Julia computations, and a Lean 4 formalisation with Mathlib of eight elementary lemmas (the interval computation is not formalised).</p>",
+  "keywords": [
+    "dyadic model",
+    "Katz-Pavlović model",
+    "finite-time blowup",
+    "dissipation exponent",
+    "self-similar front",
+    "computer-assisted proof",
+    "interval arithmetic",
+    "35Q30",
+    "35B44",
+    "65G30"
+  ],
+  "license": "MIT",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/creelie/eNvrs",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Corresponding author: d.bhattacharjee@erl-forschung.de; also itsdeep@live.com."
+}

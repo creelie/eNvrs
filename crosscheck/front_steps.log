@@ -1,0 +1,16 @@
+# front_steps 13 10 0.375 1e-12 150 60 6 center radii seed=0
+step 125  G=1.024015850963319  eps=7.9025e-13  s=0.4996512297  worst box ratio 0.8909 (k=-60)
+step 149  G=1.024015850963336  eps=7.5560e-13  s=0.4996512297  worst box ratio 0.8909 (k=-60)
+min G 1.024015850963268  max G 1.024015991049243  worst ratio 0.8909  time sum (units of 1/(r^n0 Y_n0)) 2.7734318584
+
+real	0m5.109s
+user	0m4.979s
+sys	0m0.000s
+# front_steps 13 10 0.375 1e-12 150 60 6 center radii seed=1
+step 125  G=1.024015850963319  eps=7.9025e-13  s=0.4996512297  worst box ratio 0.8909 (k=-60)
+step 149  G=1.024015850963336  eps=7.5560e-13  s=0.4996512297  worst box ratio 0.8909 (k=-60)
+min G 1.024015800916441  max G 1.024015856913171  worst ratio 0.8909  time sum (units of 1/(r^n0 Y_n0)) 2.7734327643
+
+real	0m4.980s
+user	0m4.878s
+sys	0m0.000s

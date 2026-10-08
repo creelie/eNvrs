@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Blowup above the exponent one third in viscous Katz-Pavlovic dyadic models with small shell ratios"
+type: software
+authors:
+  - family-names: Bhattacharjee
+    given-names: Deep
+    orcid: "https://orcid.org/0000-0003-0466-750X"
+    affiliation: "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India"
+    email: d.bhattacharjee@erl-forschung.de
+version: 1.0.0
+date-released: 2026-10-08
+license: MIT
+repository-code: "https://github.com/creelie/eNvrs"
+keywords:
+  - dyadic model
+  - Katz-Pavlovic model
+  - finite-time blowup
+  - dissipation exponent
+  - self-similar front
+  - computer-assisted proof
+  - interval arithmetic
+abstract: >-
+  For the viscous Katz-Pavlovic dyadic model with shell ratio Lambda > 2^(3/2),
+  global regularity holds exactly for dissipation exponents alpha >= 1/3. We
+  prove that this threshold is not universal: for Lambda = 6/5, 13/10, 3/2,
+  17/10 and 9/5, suitable nonnegative finitely supported data lose regularity
+  in finite time for every alpha <= alpha_Lambda, where alpha_Lambda > 1/3; for
+  example alpha_(13/10) = 0.378. The blowup is carried by a self-similar energy
+  front whose amplitude grows by a fixed factor kappa > 1 per shell. The proof
+  reduces the dynamics to one renormalized step of the front and verifies that
+  step in interval arithmetic. The result concerns the dyadic model, not the
+  Navier-Stokes equations.
