@@ -5,6 +5,9 @@ Code, data and paper for
 > Deep Bhattacharjee, *Blowup above the exponent one third in viscous
 > Katz–Pavlović dyadic models with small shell ratios*.
 
+Archived on Zenodo: [doi:10.5281/zenodo.23247974](https://doi.org/10.5281/zenodo.23247974)
+(all versions; v1.0.0 is [doi:10.5281/zenodo.23247975](https://doi.org/10.5281/zenodo.23247975)).
+
 ## What is proved
 
 The viscous Katz–Pavlović dyadic model is the infinite system
