@@ -8,8 +8,10 @@ Files:
 
 - `dyadic-blowup.pdf`: the paper;
 - `dyadic-blowup-tex.zip`: LaTeX source with the figures as PNG and their TikZ sources;
-- `dyadic-blowup-arxiv.tar.gz`: LaTeX source with the figures as PDF.
+- `dyadic-blowup-arxiv.tar.gz`: LaTeX source with the figures as PDF;
+- `dyadic-blowup-physica-d.pdf`: the same paper in Elsevier's elsarticle class, formatted for Physica D: Nonlinear Phenomena;
+- `dyadic-blowup-physica-d-source.zip`: its LaTeX source, one self-contained `main.tex` with the figures as PNG.
 
 The repository at this tag also holds the verifier, its output for the five cases, the independent Python, C and Julia checks, and the Lean 4 proofs of eight elementary lemmas.
 
-Version 1.1.0 adds the DOI of the Zenodo archive (concept DOI [10.5281/zenodo.23247974](https://doi.org/10.5281/zenodo.23247974)) to the paper, the README and the citation file. The mathematics is unchanged from version 1.0.0 ([10.5281/zenodo.23247975](https://doi.org/10.5281/zenodo.23247975)).
+Version 1.2.0 adds the Physica D version of the paper. It is assembled from the same source by `scripts/build_physica_d.py`, with Elsevier's front matter, declarations and numbered references; the text of the theorems and proofs is identical. One wide display in Proposition 3.1 is split over two lines. The mathematics is unchanged from versions 1.0.0 ([10.5281/zenodo.23247975](https://doi.org/10.5281/zenodo.23247975)) and 1.1.0 ([10.5281/zenodo.23248055](https://doi.org/10.5281/zenodo.23248055)); the concept DOI [10.5281/zenodo.23247974](https://doi.org/10.5281/zenodo.23247974) covers all versions.

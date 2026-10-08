@@ -6,7 +6,8 @@ Code, data and paper for
 > Katz–Pavlović dyadic models with small shell ratios*.
 
 Archived on Zenodo: [doi:10.5281/zenodo.23247974](https://doi.org/10.5281/zenodo.23247974)
-(all versions; v1.0.0 is [doi:10.5281/zenodo.23247975](https://doi.org/10.5281/zenodo.23247975)).
+(all versions; v1.0.0 is [doi:10.5281/zenodo.23247975](https://doi.org/10.5281/zenodo.23247975),
+v1.1.0 is [doi:10.5281/zenodo.23248055](https://doi.org/10.5281/zenodo.23248055)).
 
 ## What is proved
 
@@ -51,6 +52,7 @@ computation only. For Λ = 13/10 the range 0.378 < α < 1/2 remains open.
 | Path | Contents |
 |------|----------|
 | `paper/` | `main.tex` (amsart) and the TikZ figures with their data |
+| `paper/physica-d/` | the Physica D version: elsarticle front matter and declarations, Elsevier-style references, highlights |
 | `cap/verify_step.cpp`, `cap/MyHOE.h` | the interval verifier (CAPD 6.1.0) |
 | `cap/cases/` | the profiles `w*` and the box radii of the five cases |
 | `cap/logs/` | the verifier's output for each case, with all enclosures |
@@ -61,7 +63,7 @@ computation only. For Λ = 13/10 the range 0.378 < α < 1/2 remains open.
 | `crosscheck/kappa.jl` | independent Julia computation of κ(Λ) |
 | `numerics/` | fixed-point computations, the κ table and the simulations of Section 6 |
 | `lean/` | Lean 4 proofs (Mathlib) of eight elementary lemmas, with an axiom audit |
-| `scripts/` | `build_capd.sh`, `fast_checks.sh`, `build_paper.sh` |
+| `scripts/` | `build_capd.sh`, `fast_checks.sh`, `build_paper.sh`, `build_physica_d.py` |
 
 ## Reproducing
 
@@ -69,7 +71,7 @@ computation only. For Λ = 13/10 the range 0.378 < α < 1/2 remains open.
     cap/run_all.sh capd-install/bin/capd-config   # the five cases, about 20 seconds
     scripts/fast_checks.sh                        # interval re-check, C and Julia checks
     (cd lean && lake exe cache get && lake build && lake env lean CheckDyadic.lean)
-    scripts/build_paper.sh                        # dist/: PDF, tex.zip, arXiv tarball
+    scripts/build_paper.sh                        # dist/: PDF, tex.zip, arXiv tarball, Physica D version
 
 Each case prints `PASS` only if every inequality (V1)–(V9) of Section 5 holds.
 The CI workflow `.github/workflows/verify.yml` runs all of this on every pull

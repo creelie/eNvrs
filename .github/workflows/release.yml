@@ -32,7 +32,9 @@ jobs:
         run: |
           for f in dist/dyadic-blowup.pdf \
                    dist/dyadic-blowup-tex.zip \
-                   dist/dyadic-blowup-arxiv.tar.gz; do
+                   dist/dyadic-blowup-arxiv.tar.gz \
+                   dist/dyadic-blowup-physica-d.pdf \
+                   dist/dyadic-blowup-physica-d-source.zip; do
             test -s "$f" || { echo "missing $f"; exit 1; }
           done
       - name: Publish the release
