@@ -1,0 +1,7 @@
+Highlights
+
+- The viscous Katz–Pavlović dyadic model can blow up above the exponent 1/3
+- Proved for shell ratios 6/5, 13/10, 3/2, 17/10 and 9/5, at every viscosity
+- Blowup is carried by a self-similar front that grows by κ > 1 per shell
+- One renormalized front step is verified in interval arithmetic with CAPD
+- Numerics suggest the threshold 1/3 + log κ/(2 log Λ) for all Λ below about 1.875

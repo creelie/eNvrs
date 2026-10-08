@@ -15,6 +15,7 @@
 \numberwithin{equation}{section}
 \raggedbottom
 
+%% BEGIN SHARED MACROS (also used by paper/physica-d/; see scripts/build_physica_d.py)
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -38,6 +39,8 @@
 %% Zenodo archive of the code (concept DOI: resolves to the latest version).
 \newcommand{\zenodoline}{, archived on Zenodo at
   \href{https://doi.org/10.5281/zenodo.23247974}{doi:10.5281/zenodo.23247974}}
+
+%% END SHARED MACROS
 
 \title[Blowup above one third in dyadic models]
 {Blowup above the exponent one third in viscous Katz--Pavlovi\'c dyadic models with small shell ratios}
@@ -72,6 +75,7 @@ verifies that step in interval arithmetic.
 
 \maketitle
 
+%% BEGIN BODY
 \section{Introduction}\label{sec:intro}
 
 \subsection{The model}
@@ -386,9 +390,10 @@ interval $[0,s_1]$, with $(Y(0),\eps_n)\in\mathcal S_n$.
   \]
   lies in $\mathcal S_{n+1}$.
 \item For every $s_1\le\send$, the coordinates satisfy on $[0,s_1]$
-  \[
-    Y_k\le\frac{\Wd}{1-\Wd R_{-\Kb-1}\send}\ (k<-\Kb),\quad Y_k\le M\ (|k|\le\Kb+\Ka),\quad Y_k\le2\theta_k\ (k>\Ka),
-  \]
+  \begin{gather*}
+    Y_k\le\frac{\Wd}{1-\Wd R_{-\Kb-1}\send}\ (k<-\Kb),\qquad Y_k\le M\ (|k|\le\Kb+\Ka),\\
+    Y_k\le2\theta_k\ (k>\Ka),
+  \end{gather*}
   with a constant $M$ depending only on the row.
 \end{enumerate}
 \end{proposition}
@@ -874,6 +879,7 @@ way.
   \cite{Mai12,Mai13,DG98}.
 \end{enumerate}
 
+%% END MAIN TEXT
 \appendix
 
 \section{Code, data and checks}\label{app:code}
@@ -903,6 +909,8 @@ The repository \url{https://github.com/creelie/eNvrs}\zenodoline{}
   The interval computation is not formalized.
 \end{itemize}
 \endgroup
+
+%% END BODY
 
 \section*{Data availability}
 All code, input files and output logs are openly available in the
