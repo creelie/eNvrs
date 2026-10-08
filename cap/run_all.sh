@@ -5,6 +5,8 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 CAPD_CONFIG=${1:-${CAPD_CONFIG:-capd-config}}
+# capd-config prepends its own pkgconfig directory to PKG_CONFIG_PATH using $PATH_SEPARATOR
+export PATH_SEPARATOR=${PATH_SEPARATOR:-:}
 g++ -O2 -std=c++17 verify_step.cpp -I. $($CAPD_CONFIG --cflags) $($CAPD_CONFIG --libs) -o verify_step
 mkdir -p logs
 # name            KB KA  Lambda  alpha_hi   centre                          radii                         SEXTRA

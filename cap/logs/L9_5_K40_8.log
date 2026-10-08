@@ -11,4 +11,4 @@ G true in [1.0074773393342784, 1.0074775263768989]
 worst inclusion ratio 0.89939952774693088 at k=-40
 eps factor Lambda^{2 alphaHi}/(r G) <= 0.99921236993590323
 PASS
-seconds 1.832205223
+seconds 2.019916287
